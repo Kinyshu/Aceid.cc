@@ -4,8 +4,7 @@
 #define CMASKEDVART_HPP
 
 template <class TVarType, typename TMaskType, TMaskType TMaxMaskValue = 0x7FFFFFFF>
-class CMaskedVarT
-{
+class CMaskedVarT {
 public:
 	CMaskedVarT() : m_mask(0) { }
 	CMaskedVarT(const TVarType v) { Set(v); }
