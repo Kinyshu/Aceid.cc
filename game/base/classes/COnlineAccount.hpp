@@ -14,23 +14,6 @@
 using V_ONLINE_SERVERS = std::vector<CryStringT<char>, std::allocator<CryStringT<char>>>;
 using V_AUTH_PROFILE_INFO = std::vector<SAuthProfileInfo, std::allocator<SAuthProfileInfo>>;
 
-struct SMV {
-
-	template<typename T>
-	void set(std::uintptr_t o, T value) {
-		*(T*)(this + o) = value;
-	}
-
-	template<typename T>
-	T get(std::uintptr_t o) {
-		return *(T*)(this + o);
-	}
-
-	static SMV* instance() {
-		return reinterpret_cast<SMV*>(0x142369FB0);
-	}
-};
-
 class COnlineAccount {
 public:
 
