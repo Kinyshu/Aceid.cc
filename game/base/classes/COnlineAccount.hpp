@@ -44,12 +44,6 @@ public:
 	};
 public:
 
-	using fnLogout = void(__fastcall*)(COnlineAccount*, bool);
-	void Logout(bool scheduleDelayed) {
-		fnLogout(0x1412721D0)(this, scheduleDelayed);
-	}
-public:
-
 	ACEID_API CREATE_FUNCTOR(bool, m_isForcedReconnectSceduled, 0x10);
 	ACEID_API CREATE_FUNCTOR(bool, m_isForcedLogoutSceduled, 0x11);
 	ACEID_API CREATE_FUNCTOR(bool, m_reconnectMode, 0x12);
